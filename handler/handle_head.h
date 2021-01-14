@@ -1,7 +1,7 @@
 /*
  * Tabajara HTTP Server 1.2
- * handle_head.h -- This file contains the initialization
- *                  routines for the http server.
+ * handle_head.h -- This file contains the HEAD verb
+ *                  handler.
  * 
  * Marcelo Feitoza Parisi 
  */
