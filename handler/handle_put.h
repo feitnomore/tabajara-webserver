@@ -1,7 +1,7 @@
 /*
  * Tabajara HTTP Server 1.2
- * handle_put.h -- This file contains the initialization
- *                 routines for the http server.
+ * handle_put.h -- This file contains the PUT verb
+ *                 handler.
  * 
  * Marcelo Feitoza Parisi 
  */
