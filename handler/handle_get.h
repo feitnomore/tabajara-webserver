@@ -1,7 +1,7 @@
 /*
  * Tabajara HTTP Server 1.2
- * handle_get.h -- This file contains the initialization
- *                 routines for the http server.
+ * handle_get.h -- This file contains the GET verb
+ *                 handler.
  * 
  * Marcelo Feitoza Parisi 
  */
