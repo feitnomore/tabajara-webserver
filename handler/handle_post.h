@@ -1,7 +1,7 @@
 /*
  * Tabajara HTTP Server 1.2
- * handle_post.h -- This file contains the initialization
- *                  routines for the http server.
+ * handle_post.h -- This file contains the POST verb
+ *                  handler.
  * 
  * Marcelo Feitoza Parisi 
  */
