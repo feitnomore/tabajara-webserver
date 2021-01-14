@@ -23,8 +23,10 @@ void log_error(int logtype, char *theirip, char *command, char *request, int res
 			fprintf(LOG, "[%s] - %s - %s %s - %d %d\n", strtok(timestamp, "\n"), theirip, command, request, response, size);
 			fclose(LOG);
 		}
-		if (ERROR_LOG_STDOUT == 1)
+		if (ERROR_LOG_STDOUT == 1) {
 			printf("[%s] - %s - %s %s - %d %d\n", strtok(timestamp, "\n"), theirip, command, request, response, size);
+			fflush(stdout);
+		}
 	}
 }
 
@@ -45,8 +47,10 @@ void log_access(int logtype, char *theirip, char *command, char *request, int re
 			fprintf(LOG, "[%s] - %s - %s %s - %d %d\n", strtok(timestamp, "\n"), theirip, command, request, response, size);
 			fclose(LOG);
 		}
-		if (ACCESS_LOG_STDOUT == 1)
+		if (ACCESS_LOG_STDOUT == 1) {
 			printf("[%s] - %s - %s %s - %d %d\n", strtok(timestamp, "\n"), theirip, command, request, response, size);
+			fflush(stdout);
+		}
 	}
 }
 	
@@ -71,7 +75,9 @@ void log_str(int logtype, char *msg) {
 			fprintf(LOG, "[%s] %s\n", strtok(timestamp, "\n"), msg);
 			fclose(LOG);
 		}
-		if (ERROR_LOG_STDOUT == 1)
+		if (ERROR_LOG_STDOUT == 1) {
 			printf("[%s] %s\n", strtok(timestamp, "\n"), msg);
+			fflush(stdout);
+		}
 	}
 }

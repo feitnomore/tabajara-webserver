@@ -44,6 +44,7 @@
 int main(int argc, char *argv[])
 {
 	printf("Tabajara HTTP Server 1.2\n");
+	fflush(stdout);
 	pthread_t tid;
 	int ret;
 
@@ -81,6 +82,7 @@ int main(int argc, char *argv[])
 	}
 
 	printf("Server started successfully on port %s\n", MYPORT);
+	fflush(stdout);
 
 	/* Run forever */
 	while(1) {
