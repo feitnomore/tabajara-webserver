@@ -31,7 +31,7 @@ void handle_put(void* threadfd, char* rcv_buf, char* theirip) {
 
     int total_post = strlen(br_p1)+strlen(br_p2)+strlen(br_p3)+100;
 	
-	/* Motando o 400 */
+	/* Building 400 error */
 	char *response_content = malloc(sizeof(char)*total_post);
 	char length[15];
 	int content_size;
