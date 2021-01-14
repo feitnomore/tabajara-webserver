@@ -26,12 +26,12 @@
 #include <ctype.h>
 
 /* Local libs */
-#include "include/defines.h" /* Server/Socket definitions        */
+#include "include/defines.h"     /* Server/Socket definitions        */
 #include "include/mime.h"	 /* To handle mime-types             */
 #include "include/header.h"	 /* HTTP response header handler     */
 #include "include/config.h"	 /* Most of the server configuration */
 #include "include/error.h"	 /* Error pages template             */
-#include "include/logger.h"  /* Logging stuff                    */
+#include "include/logger.h"      /* Logging stuff                    */
 
 /* Local handlers */
 #include "handler/handle_post.h" /* Handle HTTP POST verb */
@@ -48,9 +48,9 @@ int main(int argc, char *argv[])
 	pthread_t tid;
 	int ret;
 
-	int sockfd, new_connection;    /* listen on sock_fd, new client on new_connection */
+	int sockfd, new_connection;        /* listen on sock_fd, new client on new_connection */
 	struct sockaddr_in my_addr;	   /* my address information                          */
-	struct sockaddr_in their_addr; /* client's address information                    */
+	struct sockaddr_in their_addr;     /* client's address information                    */
 	socklen_t sin_size;
 	int yes = 1;
 
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 	
-	my_addr.sin_family = AF_INET;		    /* Use host byte order            */
+	my_addr.sin_family = AF_INET;           /* Use host byte order            */
 	my_addr.sin_port = htons(atoi(MYPORT));	/* Setting the socket port        */
 	my_addr.sin_addr.s_addr = INADDR_ANY;   /* We'll bind on 0.0.0.0          */
 	memset(&(my_addr.sin_zero), '\0', 8);   /* zero the rest of the structure */
